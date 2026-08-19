@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Local prototype of the MandalaTickets video hero with a Spline reveal."
+    />
+    <title>MandalaTickets — Spline Hero Prototype</title>
+    <link rel="preconnect" href="https://prod.spline.design" crossorigin />
+    <link rel="preconnect" href="https://mandalatickets.com" crossorigin />
+    <link rel="stylesheet" href="assets/css/hero.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"
+    ></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#events-preview">Skip the animated hero</a>
+
+    <main>
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto">
+          <source
+            src="https://mandalatickets.com/assets/img/home/n_home.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <spline-viewer
+          class="hero__spline"
+          id="hero-spline"
+          url="https://prod.spline.design/dK4TkTIb4dqveESk/scene.splinecode"
+          events-target="global"
+          loading-anim-type="spinner-small-dark"
+          aria-hidden="true"
+        ></spline-viewer>
+
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <header class="site-header">
+          <a class="brand" href="#hero" aria-label="MandalaTickets home">
+            <span class="brand__name">MANDALA</span>
+            <span class="brand__product">Tickets</span>
+          </a>
+          <span class="prototype-label">Spline prototype</span>
+        </header>
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Official ticketing partner</p>
+          <h1 class="hero__title" id="hero-title">
+            The best nightclubs.<br />
+            One place to book.
+          </h1>
+          <p class="hero__copy">
+            Book your table for iconic parties in Cancún, Madrid, Marbella,
+            Los Cabos, Puerto Vallarta, Tulum, Playa del Carmen and more.
+          </p>
+
+          <form class="party-search" action="#" role="search">
+            <label class="sr-only" for="party-location">
+              Where do you want to party?
+            </label>
+            <input
+              id="party-location"
+              name="location"
+              type="search"
+              placeholder="Where do you want to party?"
+              autocomplete="off"
+            />
+            <button type="submit">Find party</button>
+          </form>
+        </div>
+
+        <button
+          class="reveal-control"
+          id="reveal-control"
+          type="button"
+          aria-label="Reveal the video and continue to upcoming events"
+        >
+          <span>Scroll to reveal</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+
+        <div class="hero__status" id="hero-status" role="status" aria-live="polite">
+          Loading the 3D scene
+        </div>
+      </section>
+
+      <section class="events-preview" id="events-preview" aria-labelledby="events-title">
+        <p class="events-preview__eyebrow">The experience continues</p>
+        <h2 id="events-title">Upcoming events</h2>
+        <p>
+          This space reproduces the transition into the rest of the homepage.
+          Scroll back to the top to reset the first-scroll reveal.
+        </p>
+      </section>
+    </main>
+
+    <script src="assets/js/hero.js"></script>
+  </body>
+</html>
