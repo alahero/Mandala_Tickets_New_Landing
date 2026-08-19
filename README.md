@@ -14,10 +14,18 @@ Después abre `http://localhost:4173`.
 
 ## Capas del hero
 
-1. `.hero__video`: video remoto del sitio actual.
+1. `.hero__video`: video local optimizado con variantes responsivas.
 2. `.hero__spline`: escena 3D publicada.
 3. `.hero__shade`: degradado para conservar contraste.
 4. `.hero__content`: marca, mensaje y buscador.
+
+## Video optimizado
+
+- Las pantallas de hasta 767 px reciben la variante de 720p.
+- Las pantallas mayores reciben la variante de 1080p.
+- Todas las variantes omiten el audio y conservan 30 FPS.
+- El MP4 usa carga progresiva y el poster local aparece antes de iniciar la reproducción.
+- La variante de 720p pesa 5.48 MB y la de 1080p pesa 9.17 MB, frente a los 31.3 MB del archivo original.
 
 ## Interacción
 

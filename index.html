@@ -9,7 +9,6 @@
     />
     <title>MandalaTickets — Spline Hero Prototype</title>
     <link rel="preconnect" href="https://prod.spline.design" crossorigin />
-    <link rel="preconnect" href="https://mandalatickets.com" crossorigin />
     <link rel="stylesheet" href="assets/css/hero.css" />
     <script
       type="module"
@@ -21,11 +20,21 @@
 
     <main>
       <section class="hero" id="hero" aria-labelledby="hero-title">
-        <video class="hero__video" autoplay muted loop playsinline preload="auto">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/video/hero-poster.webp"
+        >
           <source
-            src="https://mandalatickets.com/assets/img/home/n_home.mp4"
+            src="assets/video/hero-720.mp4"
             type="video/mp4"
+            media="(max-width: 767px)"
           />
+          <source src="assets/video/hero-1080.mp4" type="video/mp4" />
         </video>
 
         <spline-viewer

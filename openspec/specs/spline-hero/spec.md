@@ -11,6 +11,14 @@ El hero debe mostrar el video de MandalaTickets debajo de una escena publicada d
 **ENTONCES** el video debe continuar reproduciéndose debajo de la escena  
 **Y** el mensaje y los controles deben permanecer utilizables.
 
+### Escenario: selección del video optimizado
+
+**DADO** que el navegador carga el hero  
+**CUANDO** selecciona una fuente de video compatible  
+**ENTONCES** debe usar la variante MP4 de 720p en pantallas pequeñas  
+**Y** debe usar la variante de 1080p en pantallas mayores  
+**Y** debe mostrar un poster local mientras inicia la reproducción.
+
 ## Revelación
 
 El hero debe preparar una única revelación antes de permitir que el usuario continúe por la página.
