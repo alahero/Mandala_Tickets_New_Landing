@@ -1,0 +1,127 @@
+	/*  C A L E N D A R   W E B */
+	 .mbsc-ios-dark.mbsc-datepicker .mbsc-calendar, .mbsc-ios-dark.mbsc-datepicker .mbsc-calendar-cell, .mbsc-ios-dark.mbsc-datepicker .mbsc-calendar-slide, .mbsc-ios-dark.mbsc-datepicker-bottom.mbsc-datepicker-control-date, .mbsc-ios-dark.mbsc-datepicker-top.mbsc-datepicker-control-date {
+      background: #000000 !important;
+   }
+   .mbsc-ios-dark.mbsc-datepicker-inline {
+    border-color: #000 !important;
+   }
+   .mbsc-ios.mbsc-calendar-week-day {
+   	position: relative;
+    z-index: 100;
+    background: #0c0c0c !important;
+    margin: 0px 2px !important;
+    padding: 0px !important;
+    border: none !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+   }
+   .mbsc-ios-dark.mbsc-calendar-today {
+      color: #0c0c0c !important;
+   }
+   .mbsc-ios.mbsc-calendar-day-text{
+  	  position: relative;
+  	  z-index: 1;
+  	  margin-top: -3px !important;
+      background: #fff !important;
+      color: #0c0c0c !important;
+      border-radius: 0px !important;
+      padding: 0px !important;
+      border: none !important;
+      width: 62.5% !important;
+      height: 100% !important;
+      border-top-left-radius: 5px !important;
+      border-top-right-radius: 5px !important;
+      border-bottom-left-radius: 5px !important;
+      border-bottom-right-radius: 5px !important;
+      font-family: 'BebasNeue-Bold' !important;
+      font-size: 20px !important;
+      line-height: 2.625em;
+   }
+   .mbsc-disabled .mbsc-calendar-day-text {
+      background: #5d5d5d !important;
+      color: #fff !important;
+    }
+   .mbsc-calendar-month-name {
+      display: none !important;
+      background: #5d5d5d;
+      font-size: 12px !important;
+      border-radius: 0px !important;
+      padding: 0px !important;
+      border: none !important;
+      margin: 0px 2px !important;
+   }
+   .mbsc-ios.mbsc-datepicker .mbsc-calendar-cell, .mbsc-ios.mbsc-datepicker .mbsc-calendar-cell-inner, .mbsc-ios.mbsc-datepicker .mbsc-calendar-grid {
+      border: none !important;
+   }
+   .mbsc-calendar-cell-inner {
+      padding: 0px !important;
+   }
+
+   .mbsc-calendar-day-inner{
+   		padding-bottom: 5px !important;
+   }
+   .mbsc-ios-dark.mbsc-selected .mbsc-calendar-cell-text {
+      background: #1A69D9 !important;
+      color: #FFF !important;
+   }
+   .mbsc-ios-dark.mbsc-calendar-today, .mbsc-ios-dark.mbsc-calendar-week-nr {
+      color: #0c0c0c !important;
+   }
+   .mbsc-ios-dark.mbsc-calendar-button.mbsc-button {
+      color: #1A69D9 !important;
+   }
+   .mbsc-calendar-month,.mbsc-calendar-year{
+    	font-family: 'BebasNeue-Bold' !important;
+    	font-size: 17px !important;
+   }
+   .mbsc-ios-dark.mbsc-calendar-button.mbsc-button {
+    	flex-direction: row-reverse !important;
+   }
+   .mbsc-ios.mbsc-calendar-week-day {
+	    font-size: .825em !important;
+	    height: 2.7em !important;
+	    line-height: 2.7em !important;
+	}
+	.mbsc-ios.mbsc-calendar-week-day {
+    	margin: 0px 2.7% !important;
+	}
+	.mbsc-ios.mbsc-calendar-controls{
+		width: 93% !important;
+	}
+	.mbsc-ios .mbsc-calendar-button-next{
+		position: absolute;
+	    z-index: 1;
+	    top: 100% !important;
+	    left: 97%;
+	    margin-top: 1.5% !important;
+	}
+	.mbsc-ios .mbsc-calendar-button-prev{
+		position: absolute;
+	    z-index: 1;
+	    top: 100% !important;
+	    left: -1%;
+	    margin-top: 1.5% !important;
+	}
+	.mbsc-calendar-cell > div:not(.mbsc-calendar-cell-inner){
+		color: transparent !important;
+	}
+	.mbsc-ios-dark.mbsc-calendar-header{
+		display: flex;
+    	justify-content: center;
+	}
+	.calendario_suc_img {
+	    border: 0px !important;
+	    border-radius: 0px !important;
+	}
+	.calendario_suc_img .card {
+	    width: 100% !important;
+	    height: 260px !important;
+	    background-position: center !important;
+	    background-repeat: no-repeat !important;
+	    background-size: cover !important;
+	    margin-bottom: 0px !important;
+	    position: relative !important;
+	    border: 0px !important;
+	    border-radius: 0px !important;
+	    padding: 0px !important;
+	}

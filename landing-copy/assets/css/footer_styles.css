@@ -1,0 +1,580 @@
+    /* Footer Styles - Responsive */
+    .site-footer {
+      background-color: #0a0e17 !important;
+      background: #0a0e17 !important;
+      color: #ffffff;
+      padding: 40px 0 20px 0;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      font-family: 'Source Sans Pro', sans-serif !important;
+      font-weight: 400 !important;
+      /* Enforce Regular Base */
+      /* Ensure it covers sticky hero */
+    }
+
+
+    /* NUCLEAR OPTION: Force font family on ALL footer children to override local themes */
+    /* NUCLEAR OPTION: Force font family on ALL footer children to override local themes */
+    .site-footer h1,
+    .site-footer h2,
+    .site-footer h3,
+    .site-footer h4,
+    .site-footer h5,
+    .site-footer h6,
+    .site-footer p,
+    .site-footer span,
+    .site-footer div,
+    .site-footer li {
+      font-family: 'Source Sans Pro', sans-serif !important;
+      box-sizing: border-box !important;
+      color: #fff !important;
+      /* Force White Text */
+    }
+
+    .footer_sec_in a{
+      font-family: 'Source Sans Pro', sans-serif !important;    
+    }
+
+    .site-footer h1,
+    .site-footer h2,
+    .site-footer h3,
+    .site-footer h4,
+    .site-footer h5,
+    .site-footer h6,
+    .site-footer .widget-title {
+      font-family: 'Monopol', sans-serif !important;
+      color: #55BFEE !important;
+      /* Brand Blue */
+      font-weight: 600 !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Specific overrides for text elements to ensure readability isn't broken by heavy resets */
+    .site-footer p,
+    .site-footer a,
+    .site-footer li,
+    .site-footer span,
+    .site-footer div {
+      line-height: 1.5 !important;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Sección superior del footer - Logo y redes sociales */
+    .sec_footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      gap: 20px;
+    }
+
+    .cont_footer_mt {
+      flex: 0 0 auto;
+      min-width: 200px;
+    }
+
+    .cont_footer_mt img {
+      height: auto;
+      max-width: 100%;
+      display: block;
+    }
+
+    .cont_footer_redes {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .cont_footer_redes a {
+      padding: 0 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .cont_footer_redes a:hover {
+      opacity: 0.7;
+    }
+
+    .cont_footer_redes img {
+      display: block;
+      width: 35px;
+      height: 35px;
+    }
+
+    .cont_footer_redes .icon-mail {
+      color: #fff;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1;
+      display: inline-block;
+    }
+
+    /* Sección de contenido del footer - 3 columnas */
+    .footer_sec_in {
+      padding: 40px 0;
+      margin: 0;
+    }
+
+    .footer_sec_cont {
+      padding: 0 20px;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+    }
+
+    .footer_sec_cont .widget-title {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600 !important;
+      /* Enforce SemiBold */
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .footer_sec_cont a {
+      color: #fff;
+      display: block;
+      margin-bottom: 12px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400 !important;
+      /* Enforce Regular */
+      line-height: 1.5;
+      transition: opacity 0.3s ease;
+      text-align: justify;
+    }
+
+    /* ASOCIACIONES no debe tener texto justificado (son textos cortos) */
+    .footer-asociaciones a {
+      text-align: right;
+    }
+
+    .footer_sec_cont a:hover {
+      opacity: 0.7;
+    }
+
+    .footer_sec_cont img {
+      width: 210px;
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      display: block;
+    }
+
+    /* Centrar la columna de Pagos Aceptados */
+    .footer-pagos {
+      text-align: center !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-pagos .widget-title {
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer-pagos img {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: block;
+    }
+
+    /* Alinear las columnas en desktop */
+    @media (min-width: 992px) {
+
+      /* Primera columna - Mandalatickets.com - títulos alineados a la izquierda, textos justificados */
+      .footer-mandala {
+        text-align: left;
+      }
+
+      .footer-mandala .widget-title {
+        text-align: left;
+      }
+
+      .footer-mandala a {
+        text-align: justify;
+      }
+
+      /* Segunda y Tercera columna - Pagos y Ciudades - centradas */
+      .footer-pagos,
+      .footer-cities {
+        text-align: center !important;
+        align-items: center;
+      }
+
+      .footer-pagos .widget-title,
+      .footer-cities .widget-title {
+        text-align: center;
+        width: 100%;
+      }
+
+      .footer-cities a {
+        text-align: center;
+      }
+
+      /* Tercera columna - ASOCIACIONES - alineada a la derecha */
+      .footer-asociaciones {
+        text-align: right;
+      }
+
+      .footer-asociaciones .widget-title {
+        text-align: right;
+      }
+
+      .footer-asociaciones a {
+        text-align: right;
+      }
+    }
+
+    /* Sección Trustpilot */
+    .footer_trustpilot {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .footer_trustpilot a {
+      display: inline-block;
+      width: 150px;
+      max-width: 100%;
+    }
+
+    .footer_trustpilot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Copyright */
+    .footer-copyright {
+      margin-bottom: 1rem;
+      font-size: 14px;
+      width: 100%;
+      padding-top: 0.5rem;
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* Responsive - Tablet (768px - 991px) */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .footer-container {
+        padding: 0 30px;
+      }
+
+      .sec_footer {
+        justify-content: space-between;
+        padding: 25px 0;
+      }
+
+      .cont_footer_mt {
+        flex: 0 0 auto;
+      }
+
+      .cont_footer_redes {
+        justify-content: flex-end;
+      }
+
+      .footer_sec_cont {
+        padding: 0 15px;
+      }
+
+      /* Mantener centrado Pagos Aceptados en tablet */
+      .footer-pagos {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-pagos img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* Mantener centrado Ciudades en tablet */
+      .footer-cities {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-cities .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-cities a {
+        text-align: center !important;
+      }
+
+      /* Centrar títulos en tablet, textos justificados */
+      .footer-mandala {
+        text-align: center;
+      }
+
+      .footer-mandala .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-mandala a {
+        text-align: justify !important;
+      }
+
+      .footer-asociaciones {
+        text-align: center;
+      }
+
+      .footer-asociaciones .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-asociaciones a {
+        text-align: center !important;
+      }
+    }
+
+    /* Responsive - Mobile (hasta 767px) */
+    @media (max-width: 767.98px) {
+      .footer-container {
+        padding: 0 20px;
+      }
+
+      .site-footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .sec_footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 25px 0;
+        gap: 25px;
+      }
+
+      .cont_footer_mt {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+
+      .cont_footer_mt img {
+        max-width: 180px;
+      }
+
+      .cont_footer_redes {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .footer_sec_in {
+        padding: 30px 0;
+      }
+
+      .footer_sec_cont {
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .footer_sec_cont:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Mantener centrado Pagos Aceptados en móvil */
+      .footer-pagos,
+      .footer-cities {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-cities .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-cities a {
+        text-align: center !important;
+      }
+
+      /* Centrar títulos en móvil, textos justificados */
+      .footer-mandala {
+        text-align: center;
+      }
+
+      .footer-mandala .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-mandala a {
+        text-align: center !important;
+      }
+
+      .footer-asociaciones {
+        text-align: center;
+      }
+
+      .footer-asociaciones .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-asociaciones a {
+        text-align: center !important;
+      }
+
+      .footer_sec_cont .widget-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .footer_sec_cont a {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+
+      .footer_sec_cont img {
+        margin: 15px auto 0;
+        max-width: 100%;
+      }
+
+      .footer-pagos img {
+        margin: 15px auto 0 !important;
+      }
+
+      .footer_trustpilot {
+        margin-top: 20px;
+        padding-top: 15px;
+      }
+
+      .footer_trustpilot a {
+        width: 130px;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+        padding-top: 0.5rem;
+        padding-bottom: 15px;
+      }
+    }
+
+    /* Responsive - Mobile pequeño (hasta 480px) */
+    @media (max-width: 480px) {
+      .footer-container {
+        padding: 0 15px;
+      }
+
+      .cont_footer_mt img {
+        max-width: 150px;
+      }
+
+      .cont_footer_redes {
+        gap: 8px;
+      }
+
+      .cont_footer_redes a {
+        padding: 0 3px;
+      }
+
+      .cont_footer_redes img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .cont_footer_redes .icon-mail {
+        font-size: 26px;
+      }
+
+      .footer_sec_cont .widget-title {
+        font-size: 15px;
+      }
+
+      .footer_sec_cont a {
+        font-size: 12px;
+      }
+
+      .footer_sec_cont img {
+        width: 180px;
+        max-width: 100%;
+      }
+
+      /* Mantener centrado Pagos Aceptados en móvil pequeño */
+      .footer-pagos {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-pagos img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* Centrar títulos en móvil pequeño, Todo centrado */
+      .footer-mandala {
+        text-align: center;
+      }
+
+      .footer-mandala .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-mandala a {
+        text-align: center !important;
+      }
+
+      .footer-asociaciones {
+        text-align: center;
+      }
+
+      .footer-asociaciones .widget-title {
+        text-align: center !important;
+      }
+
+      .footer-asociaciones a {
+        text-align: center !important;
+      }
+
+      .footer-cities a {
+        text-align: center !important;
+      }
+
+      .footer_trustpilot a {
+        width: 120px;
+      }
+
+      .footer-copyright {
+        font-size: 11px;
+      }
+    }
+
+    /* Responsive - Desktop grande (1200px+) */
+    @media (min-width: 1200px) {
+      .footer-container {
+        padding: 0 60px;
+      }
+    }
+
+    /* Estilos para sección de eventos */

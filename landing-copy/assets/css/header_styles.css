@@ -1,0 +1,1282 @@
+/* Enforce Font Definitions locally */
+@font-face {
+    font-family: 'Monopol';
+    src: url("../fonts/Monopol/Monopol-Regular.otf") format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monopol';
+    src: url("../fonts/Monopol/Monopol-SemiBold.otf") format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url("../fonts/SourceSans/SourceSansPro-Regular.otf") format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header Styles */
+/* =========================================
+   Unified Header Styles (Imported from D-Cave)
+   ========================================= */
+
+/* Base sticky header styles - Desktop and Mobile */
+.headroom--pinned,
+.headroom--pinned.headroom--not-top {
+    background-color: #0a0e17 !important;
+    background: #0a0e17 !important;
+    transition: background-color 0.3s ease !important;
+}
+
+/* Navbar container - full width with black background */
+.headroom--pinned #global-navbar,
+.headroom--pinned .navbar {
+    background-color: #0a0e17 !important;
+    background: #0a0e17 !important;
+    transition: background-color 0.3s ease !important;
+}
+
+/* Ensure navbar spans full width without breaking layout */
+.headroom--pinned #global-navbar {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.headroom--pinned .navbar {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Container fluid - maintains proper padding while having black background */
+.headroom--pinned .navbar .container-fluid {
+    background-color: #0a0e17 !important;
+    background: #0a0e17 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* All child elements get black background */
+.headroom--pinned .navbar-brand,
+.headroom--pinned .navbar-brand a,
+.headroom--pinned #JS-open-menu,
+.headroom--pinned .navbar-cta,
+.headroom--pinned .navbar-nav {
+    background-color: transparent !important;
+}
+
+/* Logo del header - sin transformaciones de color */
+.navbar-brand img,
+.navbar-logo-white {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    height: auto !important;
+    max-height: none !important;
+    /* Allow height to scale */
+    width: 180px !important;
+    /* Force D-Cave width */
+    max-width: 180px !important;
+}
+
+/* El Lottie es 1080x1080; el wordmark vive en la franja central. */
+.navbar-brand,
+.navbar-brand .site-logo {
+    overflow: visible;
+}
+
+.navbar-brand .site-logo,
+.site-logo {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 60px;
+    padding: 0 !important;
+    margin: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.brand-lottie {
+    display: block;
+    width: 160px;
+    height: 30px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.brand-lottie svg {
+    display: block;
+    width: 160px !important;
+    height: 30px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-lottie svg {
+        animation: none !important;
+    }
+}
+
+/* Center navigation menu - General styles */
+@media (min-width: 992px) {
+    .navbar .container-fluid {
+        display: flex !important;
+        align-items: center !important;
+        position: static !important;
+        /* Allow mega menu to attach to nav */
+    }
+
+    .navbar-nav-centered {
+        flex: 1 !important;
+        justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-nav-centered .nav-link {
+        color: #ffffff !important;
+        font-family: 'Monopol', sans-serif !important;
+        font-size: 15px !important;
+        /* 0.95rem approx */
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em !important;
+        padding: 0 15px !important;
+        /* Match Home padding */
+        transition: color 0.3s ease !important;
+        font-weight: 600 !important;
+        /* Enforce SemiBold matches Home */
+        line-height: 24px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Converted 0.95rem to 15px for safe absolute sizing */
+
+}
+
+.navbar-nav-centered .nav-link:hover {
+    opacity: 0.8 !important;
+    color: #55BFEE !important;
+}
+
+/* BOOK TICKETS Button - More Prominent */
+.btn-book-tickets {
+    background: linear-gradient(90deg, #020297 12%, #55BFEE 98%) !important;
+    border: none !important;
+    outline: none !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    /* Converted 0.95rem to 15px */
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    padding: 12px 24px !important;
+    min-height: 44px !important;
+    border-radius: 3px !important;
+    box-shadow: 0 2px 8px rgba(85, 191, 238, 0.4) !important;
+    transition: all 0.3s ease !important;
+    touch-action: manipulation !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 24px !important;
+    /* Enforce 24px match */
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    font-synthesis: none !important;
+}
+
+.btn-book-tickets:hover,
+.btn-book-tickets:focus,
+.btn-book-tickets:active {
+    opacity: 0.95 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(85, 191, 238, 0.6) !important;
+    color: #fff !important;
+    background: linear-gradient(90deg, #020297 12%, #55BFEE 98%) !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* BOOK TICKETS Button - More Prominent */
+.theme-red-gold .btn-book-tickets {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    border: none !important;
+    outline: none !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    /* Converted 0.95rem to 15px */
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    padding: 12px 24px !important;
+    min-height: 44px !important;
+    border-radius: 3px !important;
+    box-shadow: 0 2px 8px rgba(204, 67, 60, 0.4) !important;
+    transition: all 0.3s ease !important;
+    touch-action: manipulation !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 24px !important;
+    /* Enforce 24px match */
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    font-synthesis: none !important;
+}
+
+.theme-red-gold .btn-book-tickets:hover,
+.theme-red-gold .btn-book-tickets:focus,
+.theme-red-gold .btn-book-tickets:active {
+    opacity: 0.95 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(204, 67, 60, 0.6) !important;
+    color: #fff !important;
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Override blue border from mandala.bundle.css */
+.navbar-dark .navbar-cta .btn,
+.navbar-dark .navbar-cta .btn-book-tickets,
+.navbar-cta .btn,
+.navbar-cta .btn-book-tickets {
+    border: none !important;
+    border-color: transparent !important;
+    background: linear-gradient(90deg, #020297 12%, #55BFEE 98%) !important;
+    box-shadow: 0 2px 8px rgba(85, 191, 238, 0.4) !important;
+}
+
+.navbar-dark .navbar-cta .btn:hover,
+.navbar-dark .navbar-cta .btn:focus,
+.navbar-dark .navbar-cta .btn:active,
+.navbar-dark .navbar-cta .btn-book-tickets:hover,
+.navbar-dark .navbar-cta .btn-book-tickets:focus,
+.navbar-dark .navbar-cta .btn-book-tickets:active,
+.navbar-cta .btn:hover,
+.navbar-cta .btn:focus,
+.navbar-cta .btn:active {
+    border: none !important;
+    border-color: transparent !important;
+    background: linear-gradient(90deg, #020297 12%, #55BFEE 98%) !important;
+    box-shadow: 0 4px 12px rgba(85, 191, 238, 0.6) !important;
+    outline: none !important;
+}
+
+/* Override blue border from mandala.bundle.css */
+.theme-red-gold .navbar-dark .navbar-cta .btn,
+.theme-red-gold .navbar-dark .navbar-cta .btn-book-tickets,
+.theme-red-gold .navbar-cta .btn,
+.theme-red-gold .navbar-cta .btn-book-tickets {
+    border: none !important;
+    border-color: transparent !important;
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    box-shadow: 0 2px 8px rgba(204, 67, 60, 0.4) !important;
+}
+
+.theme-red-gold .navbar-dark .navbar-cta .btn:hover,
+.theme-red-gold .navbar-dark .navbar-cta .btn:focus,
+.theme-red-gold .navbar-dark .navbar-cta .btn:active,
+.theme-red-gold .navbar-dark .navbar-cta .btn-book-tickets:hover,
+.theme-red-gold .navbar-dark .navbar-cta .btn-book-tickets:focus,
+.theme-red-gold .navbar-dark .navbar-cta .btn-book-tickets:active,
+.theme-red-gold .navbar-cta .btn:hover,
+.theme-red-gold .navbar-cta .btn:focus,
+.theme-red-gold .navbar-cta .btn:active {
+    border: none !important;
+    border-color: transparent !important;
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    box-shadow: 0 4px 12px rgba(204, 67, 60, 0.6) !important;
+    outline: none !important;
+}
+
+/* Open Pricing Modal Button Override */
+.open-pricing-modal,
+a.open-pricing-modal,
+.btn.open-pricing-modal {
+    background: linear-gradient(90deg, #020297 12%, #55BFEE 98%) !important;
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(85, 191, 238, 0.4) !important;
+}
+
+.open-pricing-modal:hover,
+.open-pricing-modal:focus,
+.open-pricing-modal:active,
+a.open-pricing-modal:hover,
+a.open-pricing-modal:focus,
+a.open-pricing-modal:active {
+    background: linear-gradient(90deg, #020297 12%, #55BFEE 98%) !important;
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(85, 191, 238, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Open Pricing Modal Button Override */
+.theme-red-gold .open-pricing-modal,
+.theme-red-gold a.open-pricing-modal,
+.theme-red-gold .btn.open-pricing-modal {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(204, 67, 60, 0.4) !important;
+}
+
+.theme-red-gold .open-pricing-modal:hover,
+.theme-red-gold .open-pricing-modal:focus,
+.theme-red-gold .open-pricing-modal:active,
+.theme-red-gold a.open-pricing-modal:hover,
+.theme-red-gold a.open-pricing-modal:focus,
+.theme-red-gold a.open-pricing-modal:active {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(204, 67, 60, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Calendar Icon Gradient Effect - Using background and SVG mask approach */
+.theme-red-gold .calendar-icon-gradient,
+.theme-red-gold img[src*="calendario.png"] {
+    filter: sepia(100%) saturate(400%) brightness(90%) hue-rotate(-10deg) !important;
+}
+
+/* Alternative Calendar Icon Class - Add to img element */
+.theme-red-gold .calendar-gradient-filter {
+    filter: sepia(100%) saturate(400%) brightness(90%) hue-rotate(-10deg) !important;
+}
+
+/* Override btn-outline-primary for BOOK TICKETS buttons */
+.theme-red-gold .btn-outline-primary.open-pricing-modal,
+.theme-red-gold .btn.btn-outline-primary.open-pricing-modal,
+.theme-red-gold a.btn-outline-primary.open-pricing-modal {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    border: 2px solid transparent !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(204, 67, 60, 0.4) !important;
+}
+
+.theme-red-gold .btn-outline-primary.open-pricing-modal:hover,
+.theme-red-gold .btn-outline-primary.open-pricing-modal:focus,
+.theme-red-gold .btn-outline-primary.open-pricing-modal:active,
+.theme-red-gold .btn.btn-outline-primary.open-pricing-modal:hover,
+.theme-red-gold .btn.btn-outline-primary.open-pricing-modal:focus,
+.theme-red-gold .btn.btn-outline-primary.open-pricing-modal:active {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    border: 2px solid transparent !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(204, 67, 60, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Heading Gradient Text Styles */
+.theme-red-gold .heading-gradient-text,
+.theme-red-gold h3.heading-gradient-text {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Section Title Gradient - for "HOW TO GET TO" headings */
+.theme-red-gold .sec_titulo_prod,
+.theme-red-gold h2.sec_titulo_prod,
+.theme-red-gold .section-heading-gradient {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Gradient text utility class */
+.text-gradient-red-gold {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Desktop specific adjustments */
+@media (min-width: 992px) {
+    .headroom--pinned .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+        min-height: 70px !important;
+    }
+
+    .headroom--pinned .navbar .container-fluid {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .headroom--pinned .navbar-brand {
+        margin-right: 32px !important;
+    }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 991.98px) {
+    .headroom--pinned .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+        min-height: 60px !important;
+    }
+
+    .headroom--pinned .navbar .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .headroom--pinned .navbar-brand {
+        margin-right: 16px !important;
+    }
+
+    .headroom--pinned #JS-open-menu {
+        margin-left: auto !important;
+        padding: 12px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+/* Smooth transition when header becomes sticky */
+.headroom {
+    transition: transform 0.3s ease-in-out !important;
+    will-change: transform !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%) !important;
+}
+
+.headroom--pinned {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.headroom--top {
+    transform: translateY(0) !important;
+    background-color: #0a0e17 !important;
+}
+
+/* Mobile Menu Drawer */
+.venue-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0a0e17 !important;
+    /* Force solid hex, no rgba */
+    background: #0a0e17 !important;
+    backdrop-filter: none !important;
+    /* Remove any glass effect */
+    -webkit-backdrop-filter: none !important;
+    z-index: 200000;
+    /* Ensure it's above everything including headroom */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.venue-drawer.show {
+    transform: translateX(0);
+}
+
+.venue-drawer__header {
+    display: flex;
+    justify-content: space-between !important;
+    /* Force spread */
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    /* Ensure full width */
+    padding: 0 10px;
+    /* Slight buffer */
+}
+
+/* Ensure logo inside drawer doesn't have right margin from desktop rules */
+.venue-drawer__header .navbar-brand {
+    margin-right: 0 !important;
+}
+
+/* Mobile Navigation Links */
+.venue-drawer .nav-link {
+    font-family: 'Monopol', sans-serif !important;
+    font-size: 19px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#JS-close-menu {
+    cursor: pointer;
+    color: #fff;
+    padding: 5px;
+}
+
+/* Mega Menu Styles */
+.navbar-nav-centered .nav-item {
+    position: static !important;
+}
+
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    margin: 0;
+    padding: 30px 0;
+    background-color: rgba(10, 14, 23, 0.98);
+    text-align: left;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 99999 !important;
+    /* Ensure it's on top */
+}
+
+/* Invisible bridge to prevent menu from closing when moving mouse from link to menu */
+.mega-menu::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    /* Bridge the gap */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
+/* Show on hover for desktop */
+@media (min-width: 992px) {
+    .nav-item.has-mega:hover .mega-menu {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        animation: fadeIn 0.3s ease;
+    }
+}
+
+.mega-menu .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Ensure left-to-right flow */
+    width: 100%;
+    max-width: 1200px;
+    /* Bootstrap default, enforce it */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 0 15px;
+}
+
+.mega-column {
+    flex: 1;
+    min-width: 180px;
+    padding: 0 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mega-column:last-child {
+    border-right: none;
+}
+
+.mega-column h3 {
+    font-family: 'Monopol', sans-serif !important;
+    color: var(--primary) !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 400 !important;
+    /* Enforcing Regular */
+    /* Less bold */
+    letter-spacing: 1px;
+}
+
+.mega-column a {
+    display: block;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 6px 0;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.mega-column a:hover {
+    color: #fff;
+    transform: translateX(5px);
+    text-shadow: 0 0 10px rgba(85, 191, 238, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Mega Menu (Accordion style included in Drawer) */
+@media (max-width: 991.98px) {
+    .mega-menu {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        border-top: none;
+        padding: 0 0 0 15px;
+        display: none;
+        backdrop-filter: none;
+    }
+
+    .mega-menu.show {
+        display: block;
+    }
+
+    .mega-column {
+        border-right: none;
+        padding-bottom: 20px;
+        padding-left: 0;
+    }
+}
+
+/* RESET Venue Drawer Styles for Desktop */
+@media (min-width: 992px) {
+    .venue-drawer {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        transform: none;
+        display: flex !important;
+        flex-direction: row;
+        padding: 0;
+        overflow: visible;
+        transition: none;
+    }
+
+    .venue-drawer.show {
+        transform: none;
+    }
+
+    .venue-drawer__header {
+        display: none !important;
+    }
+
+    /* Reset link styles from mobile drawer */
+    .venue-drawer .nav-link {
+        font-size: 15px;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #fff !important;
+    }
+
+    .venue-drawer .nav-link:hover {
+        color: #55BFEE !important;
+    }
+}
+
+/* Mobile Specific Menu Styles */
+@media (max-width: 991.98px) {
+
+    /* Hide the original desktop nav items in mobile to use the custom block if preferred, or style them */
+    .navbar-nav-centered {
+        display: none !important;
+    }
+
+    .mobile-menu-content {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-link {
+        font-family: 'Monopol', sans-serif !important;
+        font-size: 21px !important;
+        color: #fff !important;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none !important;
+    }
+
+    .mobile-link:focus,
+    .mobile-link:active {
+        box-shadow: none;
+        text-decoration: none;
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        color: var(--primary) !important;
+    }
+
+    .mobile-link:hover {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        color: var(--primary) !important;
+        text-decoration: none;
+    }
+
+    /* FIX: Override generic .btn.btn-link style from mandala.bundle.css which forces blue color */
+    .btn.btn-link.mobile-link,
+    .venue-drawer .btn.btn-link.mobile-link,
+    #mobileDrawer .btn.btn-link.mobile-link {
+        color: #fff !important;
+        text-decoration: none !important;
+        padding: 15px 0 !important;
+        /* Restore padding */
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        width: 100% !important;
+        text-align: left !important;
+        border-radius: 0 !important;
+    }
+
+    .btn.btn-link.mobile-link:hover,
+    .btn.btn-link.mobile-link:focus,
+    .btn.btn-link.mobile-link:active,
+    .btn.btn-link.mobile-link[aria-expanded="true"] {
+        color: var(--primary) !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .mobile-card {
+        background: transparent;
+        border: none;
+    }
+
+    .mobile-card-body {
+        padding: 10px 0 20px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-sub-accordion-link {
+        font-family: 'Monopol', sans-serif !important;
+        font-size: 18px !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        padding: 12px 0 12px 20px;
+        /* Indent */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: block;
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        background: transparent !important;
+        /* Force transparent/no-gradient */
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        text-decoration: none !important;
+    }
+
+    .mobile-sub-accordion-link:hover,
+    .mobile-sub-accordion-link:focus,
+    .mobile-sub-accordion-link:active {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        color: var(--primary) !important;
+        box-shadow: none !important;
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+
+    /* Aggressive Reset for all children */
+    .mobile-sub-accordion-link:active *,
+    .mobile-sub-accordion-link:focus * {
+        background: transparent !important;
+        background-image: none !important;
+    }
+
+    /* KILL ALL BOOTSTRAP BUTTON STYLES IN DRAWER */
+    .venue-drawer .btn,
+    .venue-drawer .btn:focus,
+    .venue-drawer .btn:active {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    /* Force mobile sub links to be white/neutral, overriding mandala.bundle.css */
+    #mobileDrawer .mobile-sub-link,
+    .venue-drawer .mobile-sub-link,
+    .mobile-sub-body .mobile-sub-link {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-family: 'Monopol', sans-serif !important;
+        font-size: 16px !important;
+        padding: 10px 0 10px 20px;
+        display: block;
+        text-decoration: none !important;
+        transition: color 0.3s ease;
+    }
+
+    #mobileDrawer .mobile-sub-link:hover,
+    .venue-drawer .mobile-sub-link:hover,
+    .mobile-sub-body .mobile-sub-link:hover {
+        color: #fff !important;
+        background: transparent !important;
+    }
+
+    /* Ensure specific "View All" links or others with inline styles keep their color if needed, 
+       but here we want to enforce uniformity unless specific class overrides. 
+       Actually, the "View All Venues" has inline style color: #55BFEE. !important here might break it.
+       Let's target the specific ones or use :not([style*="color"]) if supported, 
+       or just rely on the fact that inline style !important would win? 
+       Inline style `style="color: #55BFEE;"` loses to `color: white !important;` in CSS.
+       
+       Better approach: Don't use !important for color if possible, OR allow the specific one.
+       The "View All" link usually has a specific look.
+       Ref: <a class="mobile-sub-link" ... style="font-weight: bold; color: #55BFEE;">
+       
+       If I use !important, I override the inline style.
+       I should allow the .text-info or similar if present.
+       
+       Let's use a very specific selector but try to avoid !important on color if the ID selector is enough.
+       #mobileDrawer .mobile-sub-link is (1,1,1) specificity.
+       mandala.bundle.css usually uses simple classes but maybe nested.
+       Grep showed `color: #1A69D9 !important;` in some places. 
+       If bundle has !important, I MUST use !important.
+       
+       To preserve the "View All" color, I can add a rule for it.
+       The "View All" link seems to just be an <a> tag.
+       I will check if there is a class for "View All".
+       It just says `style="font-weight: bold; color: #55BFEE;"`.
+       
+       I will force the color for the standard ones.
+       And add a rule for the highlighted one if I can identify it, or assume the user wants UNIFORM white.
+       Actually, the home page "View All" might be blue.
+       The user said "titles ... color different ... home".
+       Home: "CANCUN" is white (0.85).
+       Venue: "CANCUN" is Blue.
+       
+       So I just want to match Home. 
+       Home uses `rgba(255, 255, 255, 0.85)`.
+       
+       I will use !important to kill the Blue.
+       AND I will explicitly re-add the "View All" color.
+    */
+
+    #mobileDrawer .mobile-sub-link[style*="color"],
+    .venue-drawer .mobile-sub-link[style*="color"] {
+        color: #55BFEE !important;
+        /* Restore inline style color if present, assuming it is the blue one */
+    }
+
+    /* FIX: Force mobile accordion links (City Names like CANCUN) to be white 
+       These were being overridden by .btn-link styles in mandala.bundle.css */
+    #mobileDrawer .mobile-sub-accordion-link,
+    .venue-drawer .mobile-sub-accordion-link,
+    .mobile-card-header .mobile-sub-accordion-link,
+    /* VITAL FIX: Target the bootstrap classes that are overriding this */
+    #mobileDrawer .btn.btn-link.mobile-sub-accordion-link,
+    .venue-drawer .btn.btn-link.mobile-sub-accordion-link {
+        color: rgba(255, 255, 255, 0.85) !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    #mobileDrawer .mobile-sub-accordion-link:hover,
+    .venue-drawer .mobile-sub-accordion-link:hover,
+    .mobile-card-header .mobile-sub-accordion-link:hover,
+    #mobileDrawer .btn.btn-link.mobile-sub-accordion-link:hover,
+    .venue-drawer .btn.btn-link.mobile-sub-accordion-link:hover {
+        color: #fff !important;
+        text-decoration: none !important;
+    }
+
+    .venue-drawer .btn:active,
+    .venue-drawer .btn-link,
+    .venue-drawer .btn-link:focus,
+    .venue-drawer .btn-link:active,
+    .venue-drawer button:focus {
+        background: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        border-color: transparent !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+
+    /* CRITICAL: Kill the ::before pseudo-element gradient */
+    .venue-drawer .btn::before,
+    .venue-drawer .btn-link::before {
+        display: none !important;
+        background: none !important;
+        opacity: 0 !important;
+    }
+
+    /* Nested Chevron styling */
+    .mobile-sub-accordion-link[aria-expanded="true"] .fa-plus {
+        transform: rotate(45deg);
+        /* Turn + to x */
+        transition: transform 0.3s;
+    }
+
+    .mobile-sub-accordion-link .fa-plus {
+        font-size: 0.8em;
+        transition: transform 0.3s;
+    }
+
+    .mobile-sub-body {
+        padding: 5px 0 15px 35px;
+        /* Deep indent for venues */
+        background-color: rgba(0, 0, 0, 0.2);
+        /* Slight darkening for hierarchy, solid */
+    }
+
+    .mobile-sub-link {
+        display: block;
+        color: rgba(255, 255, 255, 0.6);
+        padding: 6px 0;
+        font-size: 15px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .mobile-sub-link:hover {
+        color: #fff;
+        text-decoration: none;
+        padding-left: 5px;
+    }
+
+    /* Active State (Blue Text when open) */
+    .mobile-link[aria-expanded="true"],
+    .mobile-sub-accordion-link[aria-expanded="true"] {
+        color: var(--primary) !important;
+        font-weight: 600;
+    }
+
+    /* Chevron rotation properties are generic enough */
+    .mobile-link[aria-expanded="true"] .fa-chevron-down {
+        transform: rotate(180deg);
+        transition: transform 0.3s;
+    }
+
+    .mobile-link .fa-chevron-down {
+        transition: transform 0.3s;
+        font-size: 0.8em;
+    }
+
+    .mobile-city-header {
+        color: var(--primary);
+        font-family: 'Monopol', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        opacity: 0.9;
+    }
+
+    .mobile-lang .lang-link {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .mobile-lang .lang-link.active {
+        color: #fff;
+        font-weight: 600;
+        border-bottom: 2px solid var(--primary);
+    }
+
+    .mobile-lang .separator {
+        color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+    font-family: 'Monopol', sans-serif !important;
+    font-size: 14px;
+    font-weight: 600 !important;
+    /* Enforcing SemiBold */
+}
+
+.language-switcher .lang-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0 5px;
+}
+
+.language-switcher .lang-link:hover,
+.language-switcher .lang-link.active {
+    color: #fff;
+    font-weight: 600;
+}
+
+.language-switcher .separator {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 13px;
+}
+
+/* EVENTS Mega Menu Styles (Promo Box) */
+.promo-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    /* Optional rounded corners */
+    overflow: hidden;
+    height: 180px;
+    /* Adjusted to be more horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.promo-box:hover {
+    transform: translateY(-5px);
+}
+
+.promo-box .overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.45;
+    /* Matches inline style default */
+    transition: opacity 0.3s ease;
+}
+
+.promo-box:hover .overlay-dark {
+    opacity: 0.2;
+    /* Lighten on hover */
+}
+
+.promo-box-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.promo-box-content h3 {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.promo-box-content .btn {
+    padding: 8px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    /* Reuse existing button gradient if possible or define primary */
+}
+
+/* =========================================
+   PRICING MODAL STYLES - Global Overrides
+   ========================================= */
+
+/* Fix modal z-index to appear above header (which uses z-index: 100000) */
+#pricingModal {
+    z-index: 300000 !important;
+    position: fixed !important;
+}
+
+/*
+ * Mobiscroll monta el datepicker en .mbsc-popup-wrapper con z-index ~99998 (vendor).
+ * Debe quedar por encima del #pricingModal (300000); si no, el calendario queda tapado.
+ */
+body.pricing-modal-open .mbsc-popup-wrapper,
+body.pricing-modal-open .mbsc-popup-overlays,
+body.pricing-modal-open .mbsc-popup-wrap,
+body.pricing-modal-open .mbsc-popup,
+body.pricing-modal-open .mbsc-fr-overlay,
+body.pricing-modal-open .mbsc-fr-popup,
+body.pricing-modal-open .mbsc-fr-overlay,
+body.pricing-modal-open .mbsc-datepicker-popup {
+    z-index: 350010 !important;
+}
+
+/* Hide header when modal is open - add body.modal-open class via JS */
+body.pricing-modal-open .headroom,
+body.pricing-modal-open #global-navbar {
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+/* Modal Heading Text - Override blue #1969d9 with gradient */
+.theme-red-gold #pricingModal h2,
+.theme-red-gold #pricingModal h3,
+.theme-red-gold #pricingModal .modal-heading,
+.theme-red-gold #pricingModal [style*="1969d9"],
+.theme-red-gold #pricingModal [style*="#1969d9"] {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* "Tickets & Packages" title in modal */
+.theme-red-gold #pricingModal>div>div:first-child h2 {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* "HOW TO GET TO" heading inside modal */
+.theme-red-gold #pricingModal h3[style*="font-family"] {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* "UPCOMING EVENTS" heading with class txt_disco_calen_web */
+.theme-red-gold .txt_disco_calen_web,
+.theme-red-gold h2.txt_disco_calen_web {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Modal close: borde de sucursal, equis siempre blanca */
+.theme-red-gold #closePricingModal {
+    border: 2px solid #CC433C !important;
+    color: #ffffff !important;
+}
+
+.theme-red-gold #closePricingModal:hover {
+    background: rgba(204, 67, 60, 0.25) !important;
+    border-color: #CC433C !important;
+    color: #ffffff !important;
+}
+
+/* Share de sección (junto al título): mismo esquema que el × — icono blanco, borde sucursal */
+.theme-red-gold #pricingModal .mt-share-section {
+    border-color: #CC433C !important;
+    color: #ffffff !important;
+}
+
+.theme-red-gold #pricingModal .mt-share-section:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.theme-red-gold #pricingModal .mt-share-section.is-copied {
+    border-color: #CC433C !important;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Modal content border - change from blue to gradient compatible */
+.theme-red-gold #pricingModal>div {
+    border: 2px solid rgba(204, 67, 60, 0.4) !important;
+}
+
+/* Hide modal-backdrop when pricing modal is not open */
+body:not(.pricing-modal-open) .modal-backdrop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Ensure modal-backdrop doesn't interfere when modal is closed */
+.modal-backdrop {
+    z-index: 299999 !important;
+}
+
+/* When pricing modal is open, ensure proper stacking */
+body.pricing-modal-open {
+    overflow: hidden !important;
+}
+
+body.pricing-modal-open .headroom,
+body.pricing-modal-open #global-navbar {
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+/* Force remove any Bootstrap modal styles that might interfere */
+body.pricing-modal-open .modal-backdrop.show {
+    opacity: 0 !important;
+    display: none !important;
+}
