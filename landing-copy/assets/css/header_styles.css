@@ -390,6 +390,50 @@ a.open-pricing-modal:active {
     transform: translateY(-2px) !important;
 }
 
+/* El degradado del CTA se desplaza en bucle al hacer hover. */
+@keyframes mt-cta-gradient-shift {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+#global-navbar a.btn-book-tickets {
+    background-image: linear-gradient(90deg, #020297 0%, #55BFEE 50%, #020297 100%) !important;
+    background-size: 200% 100% !important;
+    background-position: 0% 50% !important;
+    background-repeat: no-repeat !important;
+}
+
+#global-navbar a.btn-book-tickets:hover {
+    background-image: linear-gradient(90deg, #020297 0%, #55BFEE 50%, #020297 100%) !important;
+    background-size: 200% 100% !important;
+    animation: mt-cta-gradient-shift 1.6s linear infinite !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease !important;
+}
+
+.theme-red-gold #global-navbar a.btn-book-tickets {
+    background-image: linear-gradient(90deg, #CC433C 0%, #FBE974 50%, #CC433C 100%) !important;
+    background-size: 200% 100% !important;
+    background-position: 0% 50% !important;
+}
+
+.theme-red-gold #global-navbar a.btn-book-tickets:hover {
+    background-image: linear-gradient(90deg, #CC433C 0%, #FBE974 50%, #CC433C 100%) !important;
+    background-size: 200% 100% !important;
+    animation: mt-cta-gradient-shift 1.6s linear infinite !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #global-navbar a.btn-book-tickets:hover {
+        animation: none !important;
+        background-position: 0% 50% !important;
+    }
+}
+
 /* Heading Gradient Text Styles */
 .theme-red-gold .heading-gradient-text,
 .theme-red-gold h3.heading-gradient-text {

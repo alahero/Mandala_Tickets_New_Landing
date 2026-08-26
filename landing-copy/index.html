@@ -64,9 +64,9 @@
       <link href="assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet" />
 
       <!-- N U E V O S  C S S -->
-      <link href="assets/css/style-nuevo.css" rel="stylesheet" media="screen">
+      <link href="assets/css/style-nuevo.css?v=hero-brand-2" rel="stylesheet" media="screen">
       <link href="assets/css/header_styles.css" rel="stylesheet" media="screen">
-      <link href="assets/css/parallax.css" rel="stylesheet" media="screen"/>
+      <link href="assets/css/parallax.css?v=hero-brand-2" rel="stylesheet" media="screen"/>
       <link href="assets/css/footer_styles.css" rel="stylesheet" media="screen">
       <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" /> -->
 
@@ -1032,14 +1032,19 @@
     </video>
     <!-- Parallax Slices Container -->
     <div id="parallax-container"></div>
-    <div class="hero-content container" style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-      <h2 class="hero-title">Official<br>Ticketing Partner of<br>the Best Nightclubs</h2>
-      <p class="hero-subtitle">Book your table for the most iconic parties in Cancun, Madrid, Marbella, Los Cabos, Puerto Vallarta, Tulum, Playa del Carmen &amp; More</p>
-      <div class="hero-search glass-panel" style="position: relative;">
-        <input id="heroSearchInput" placeholder="Where do you want to party?"
-          type="text" autocomplete="off" />
-        <button id="heroSearchBtn" class="btn btn-search">Find Party</button>
-        <div id="searchResults" class="search-results"></div>
+    <div class="hero-stack container">
+      <div class="hero-brand">
+        <img class="hero-brand-mark" src="assets/img/logo/mandala-hero.svg" width="538" height="373" alt="Mandala Tickets" />
+      </div>
+      <div class="hero-content">
+        <h2 class="hero-title">Official<br>Ticketing Partner of<br>the Best Nightclubs</h2>
+        <p class="hero-subtitle">Book your table for the most iconic parties in Cancun, Madrid, Marbella, Los Cabos, Puerto Vallarta, Tulum, Playa del Carmen &amp; More</p>
+        <div class="hero-search glass-panel" style="position: relative;">
+          <input id="heroSearchInput" placeholder="Where do you want to party?"
+            type="text" autocomplete="off" />
+          <button id="heroSearchBtn" class="btn btn-search">Find Party</button>
+          <div id="searchResults" class="search-results"></div>
+        </div>
       </div>
     </div>
 </section>

@@ -11,8 +11,11 @@
     height: 100vh;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    padding-top: 72px;
+    padding-bottom: clamp(2rem, 9vh, 5.5rem);
+    box-sizing: border-box;
 }
 
 /* Parallax Hero Slices */
@@ -54,6 +57,7 @@
     transform: translateY(var(--target-y));
 }
 
+.hero-stack,
 .hero-content {
     position: relative;
     z-index: 2;
