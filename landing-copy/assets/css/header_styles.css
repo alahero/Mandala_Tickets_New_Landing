@@ -390,47 +390,62 @@ a.open-pricing-modal:active {
     transform: translateY(-2px) !important;
 }
 
-/* El degradado del CTA se desplaza en bucle al hacer hover. */
+/* El degradado en reposo va en el botón; ::before solo cubre y anima en hover. */
 @keyframes mt-cta-gradient-shift {
-    from {
+    0% {
         background-position: 0% 50%;
     }
 
-    to {
-        background-position: 100% 50%;
+    100% {
+        background-position: 200% 50%;
     }
 }
 
-#global-navbar a.btn-book-tickets {
-    background-image: linear-gradient(90deg, #020297 0%, #55BFEE 50%, #020297 100%) !important;
-    background-size: 200% 100% !important;
-    background-position: 0% 50% !important;
-    background-repeat: no-repeat !important;
-}
-
-#global-navbar a.btn-book-tickets:hover {
-    background-image: linear-gradient(90deg, #020297 0%, #55BFEE 50%, #020297 100%) !important;
-    background-size: 200% 100% !important;
-    animation: mt-cta-gradient-shift 1.6s linear infinite !important;
+#global-navbar a.btn-book-tickets,
+#global-navbar a.btn-book-tickets:hover,
+#global-navbar a.btn-book-tickets:focus,
+#global-navbar a.btn-book-tickets:active {
+    position: relative !important;
+    isolation: isolate;
+    overflow: hidden !important;
+    background: linear-gradient(90deg, #020297 12%, #55BFEE 98%) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease !important;
 }
 
-.theme-red-gold #global-navbar a.btn-book-tickets {
-    background-image: linear-gradient(90deg, #CC433C 0%, #FBE974 50%, #CC433C 100%) !important;
-    background-size: 200% 100% !important;
-    background-position: 0% 50% !important;
+#global-navbar a.btn-book-tickets::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background-image: linear-gradient(90deg, #020297 0%, #55BFEE 25%, #020297 50%, #55BFEE 75%, #020297 100%);
+    background-size: 200% 100%;
+    background-repeat: repeat-x;
+    animation: none;
 }
 
-.theme-red-gold #global-navbar a.btn-book-tickets:hover {
-    background-image: linear-gradient(90deg, #CC433C 0%, #FBE974 50%, #CC433C 100%) !important;
-    background-size: 200% 100% !important;
-    animation: mt-cta-gradient-shift 1.6s linear infinite !important;
+#global-navbar a.btn-book-tickets:hover::before {
+    opacity: 1;
+    animation: mt-cta-gradient-shift 5s linear infinite;
+}
+
+.theme-red-gold #global-navbar a.btn-book-tickets,
+.theme-red-gold #global-navbar a.btn-book-tickets:hover,
+.theme-red-gold #global-navbar a.btn-book-tickets:focus,
+.theme-red-gold #global-navbar a.btn-book-tickets:active {
+    background: linear-gradient(90deg, #CC433C 12%, #FBE974 98%) !important;
+}
+
+.theme-red-gold #global-navbar a.btn-book-tickets::before {
+    background-image: linear-gradient(90deg, #CC433C 0%, #FBE974 25%, #CC433C 50%, #FBE974 75%, #CC433C 100%);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #global-navbar a.btn-book-tickets:hover {
-        animation: none !important;
-        background-position: 0% 50% !important;
+    #global-navbar a.btn-book-tickets:hover::before {
+        animation: none;
+        opacity: 0;
     }
 }
 
