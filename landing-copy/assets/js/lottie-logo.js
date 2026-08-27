@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var PATH = "assets/lottie/logo.json";
+  var PATH = "assets/lottie/logo.json?v=color-1";
   var machines = [];
 
   function prefersReducedMotion() {
